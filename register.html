@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Lab Task 1</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin">
+    <link href="https://fonts.googleapis.com/css2?family=Capriola&family=Fredoka+One&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+      <div class="row w-200">
+        <h5>
+          <strong>Event Registration <img src="form.png" style="width:40px; height:40px; margin-left:2px;">
+          </strong>
+        </h5>
+      </div>
+      <p>
+        <strong>Please complete the form to register.</strong>
+      </p>
+      <form action="handle_Reg.php" method="post">
+        <div class="form-group">
+          <label for="event">
+            <strong>Event Name :</strong>
+          </label>
+          <input type="text" class="form-control" name="eventName" placeholder="Enter Event Name">
+        </div>
+        <div class="form-group">
+          <label for="PIC">
+            <strong>Person In Charge Name :</strong>
+          </label>
+          <input type="text" class="form-control" name="picName" placeholder="Enter Person In Charge">
+        </div>
+        <div class="form-group">
+          <label for="PICPhone">
+            <strong>Person In Charge Phone No. :</strong>
+          </label>
+          <input type="tel" class="form-control" name="picPhone" placeholder="01x-xxxxxxx">
+        </div>
+        <div class="form-group">
+          <label for="email">
+            <strong>Email Address :</strong>
+          </label>
+          <input type="text" class="form-control" name="emailAdd" placeholder="test@gmail.com">
+        </div>
+        <div class="form-group">
+          <label for="Password">
+            <strong>Password :</strong>
+          </label>
+          <input type="password" class="form-control" name="passWord" placeholder="Password">
+        </div>
+        <div class="form-group">
+          <label for="Password">
+            <strong>Confirm Password :</strong>
+          </label>
+          <input type="password" class="form-control" name="confirmPassword" placeholder="Password Confirmation">
+        </div>
+        <div class="form-group">
+          <label for="EventDate">
+            <strong>Date of Event :</strong>
+            <br>
+            <i>Choose between the year 2022 - 2050 only</i>
+          </label>
+          <input type="date" class="form-control" name="eventDate">
+        </div>
+        <div class="form-group">
+          <label for="EventType">
+            <strong>Event Type :</strong>
+          </label>
+          <select name="eventType" class="form-control">
+            <option value="0">Pick One</option>
+            <option value="Special Gathering">Special Gathering</option>
+            <option value="AJK Meeting">AJK Meeting</option>
+            <option value="Competition">Competition</option>
+            <option value="High Tea">High Tea</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-warning">
+          <strong>Submit</strong>
+        </button>
+        <button type="reset" class="btn btn-warning">
+          <strong>Reset</strong>
+        </button>
+      </form>
+    </div>
+  </body>
+</html>
+<style>
+  .container {
+    margin-bottom: 30px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
+    border-radius: 20px;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .row {
+    background-color: orange;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+
+  h5 {
+    text-shadow: 2px 2px black;
+    font-size: 28px;
+    height: 40px;
+    padding-top: 5px;
+    color: white;
+    text-align: center;
+    font-family: 'Fredoka One', cursive;
+    width: 100%;
+  }
+
+  p {
+    text-align: center;
+  }
+
+  .btn-warning {
+    text-shadow: 1px 1px black;
+    color: white;
+    margin-bottom: 20px;
+  }
+
+  .btn-warning:hover {
+    text-shadow: 1px 1px black;
+    color: white;
+  }
+
+  .form-control:focus {
+    border-color: orange;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 153, 0, 0.6);
+  }
+
+  i {
+    font-size: 14px;
+  }
+</style>
